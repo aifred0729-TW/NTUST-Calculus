@@ -15,8 +15,8 @@ def midpoint(upper, lower, n):
 
 def compute_using_integral():
     """
-    Calculates e using the integral definition with the midpoint integration method.
-    Stopping criterion: When the difference between consecutive estimates is less than epsilon.
+    用積分定義跟 midpoint 來算 e
+    停止標準是到小數點後第4位 不然用 python 太慢了
     """
     start = time.process_time()
     e = 1  # Initial guess for e
@@ -31,8 +31,8 @@ def compute_using_integral():
 
 def compute_using_limit():
     """
-    Calculates e using the limit definition.
-    Stopping criterion: When the increment in the value is less than epsilon.
+    用極限的定義來求 e
+    停止的條件是如果加上去的值小於 epsilon 的時候
     """
     start = time.process_time()
     n = 1
@@ -48,8 +48,8 @@ def compute_using_limit():
 
 def compute_using_summation():
     """
-    Calculates e using the series expansion.
-    Stopping criterion: When the term added is less than epsilon.
+    用 summation 來求 e
+    停止的條件是如果加上去的值小於 epsilon 的時候
     """
     start = time.process_time()
     e = 1
