@@ -17,9 +17,9 @@ def compute_using_integral():
     停止標準是到小數點後第4位 不然用 python 太慢了
     """
     start = time.process_time()
-    e = 1  # Initial guess for e
+    e = 1
     while True:
-        print(e)
+        #print(e)
         tmp = abs(midpoint(e, 1, 100) - 1)
         if tmp < 0.00001: break
         e += 0.00001
