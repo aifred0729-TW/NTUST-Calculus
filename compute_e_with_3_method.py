@@ -1,8 +1,6 @@
 import time
 epsilon = 1e-15
 
-# Implementing the three methods to calculate the Euler number e in Python
-
 def midpoint(upper, lower, n):
     summation = 0
     hight = 0
