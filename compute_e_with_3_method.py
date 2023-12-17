@@ -1,5 +1,5 @@
 import time
-epsilon = 1e-15
+meow = 1e-15
 
 def midpoint(upper, lower, n):
     summation = 0
@@ -30,7 +30,7 @@ def compute_using_integral():
 def compute_using_limit():
     """
     用極限的定義來求 e
-    停止的條件是如果加上去的值小於 epsilon 的時候
+    停止的條件是如果加上去的值小於 meow 的時候
     """
     start = time.process_time()
     n = 1
@@ -38,7 +38,7 @@ def compute_using_limit():
     while True:
         n += 1
         next_e = (1 + 1 / n) ** n
-        if abs(next_e - e) < epsilon:
+        if abs(next_e - e) < meow:
             break
         e = next_e
     end = time.process_time()
@@ -47,7 +47,7 @@ def compute_using_limit():
 def compute_using_summation():
     """
     用 summation 來求 e
-    停止的條件是如果加上去的值小於 epsilon 的時候
+    停止的條件是如果加上去的值小於 meow 的時候
     """
     start = time.process_time()
     e = 1
@@ -56,7 +56,7 @@ def compute_using_summation():
     while True:
         factorial *= n
         term = 1 / factorial
-        if term < epsilon:
+        if term < meow:
             break
         e += term
         n += 1
